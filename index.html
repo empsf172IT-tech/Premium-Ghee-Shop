@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GHRITA — Ultra-Premium Handcrafted Ghee</title>
+  <meta name="description"
+    content="Discover GHRITA. Handcrafted in small batches using traditional slow-clarified methods. Pure organic grass-fed ghee, root in heritage, crafted for gourmets.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+
+  <!-- ==========================================
+       STICKY HEADER
+       ========================================== -->
+  <header>
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#" class="logo" id="logo">
+        <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1" fill="none" />
+          <path
+            d="M12 7C12 7 9 11 9 13.5C9 15.1569 10.3431 16.5 12 16.5C13.6569 16.5 15 15.1569 15 13.5C15 11 12 7 12 7Z"
+            fill="currentColor" />
+          <path d="M8 13.5H16" stroke="var(--bg-primary)" stroke-width="1" />
+        </svg>
+        GHRITA
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-menu">
+        <li><a href="#" class="nav-link active">Home</a></li>
+        <li><a href="#products" class="nav-link">Our Ghee</a></li>
+        <li><a href="#sweets" class="nav-link">Sweets</a></li>
+        <li><a href="#heritage" class="nav-link">Heritage</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#benefits" class="nav-link">Benefits</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Light/Dark Toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Night Mode">
+          <!-- Sun Icon -->
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button class="cart-trigger" id="cart-trigger" aria-label="View Shopping Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MOBILE OVERLAY MENU
+       ========================================== -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-menu">
+      <li><a href="#" class="mobile-link">Home</a></li>
+      <li><a href="#products" class="mobile-link">Our Ghee</a></li>
+      <li><a href="#sweets" class="mobile-link">Sweets</a></li>
+      <li><a href="#heritage" class="mobile-link">Heritage</a></li>
+      <li><a href="#process" class="mobile-link">Process</a></li>
+      <li><a href="#benefits" class="mobile-link">Benefits</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <p>© 2026 GHRITA. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"
+      style="background-image: url('https://images.pexels.com/photos/20689436/pexels-photo-20689436.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="badge hero-badge reveal">Pure. Golden. Timeless.</span>
+      <h1 class="reveal">The Golden Standard of <span>Pure Ghee</span></h1>
+      <p class="hero-desc reveal">
+        Artisanal, slow-crafted clarified butter originating from pristine grass-fed pastures. Experience the nutty
+        richness, delicate aroma, and culinary perfection crafted for gourmet kitchens worldwide.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#products" class="btn btn-primary" data-product="grassfed">Shop Pure Ghee</a>
+        <a href="#heritage" class="btn btn-secondary">Discover Our Craft</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SIGNATURE PRODUCTS SECTION
+       ========================================== -->
+  <section class="section-padding" id="products">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Our Collection</span>
+        <h2 class="section-title">The Signature Selection</h2>
+        <p class="section-subtitle">Meticulously refined profiles, each designed to elevate your gastronomy and wellness
+          rituals.</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card reveal">
+          <span class="product-tag">Traditional</span>
+          <div class="product-image-container">
+            <img src="https://images.pexels.com/photos/19490390/pexels-photo-19490390.jpeg" alt="Classic Golden Ghee"
+              class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Classic Golden Ghee</h3>
+            <p class="product-desc">Slow-clarified to release rich, nutty undertones. A timeless, versatile chef's
+              companion for roasting and finishing.</p>
+            <div class="product-footer">
+              <span class="product-price">$28.00</span>
+              <button class="btn-add-cart" data-product="classic">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card reveal">
+          <span class="product-tag">Premium Grass-Fed</span>
+          <div class="product-image-container">
+            <img src="https://images.pexels.com/photos/8064106/pexels-photo-8064106.jpeg" alt="Grass-Fed A2 Ghee"
+              class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Grass-Fed A2 Ghee</h3>
+            <p class="product-desc">Exclusively sourced from grass-fed herd milk. Rich in CLA and Omega-3 fatty acids
+              with a clean buttery finish.</p>
+            <div class="product-footer">
+              <span class="product-price">$38.00</span>
+              <button class="btn-add-cart" data-product="grassfed">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card reveal">
+          <span class="product-tag">Heritage Cultured</span>
+          <div class="product-image-container">
+            <img src="https://images.pexels.com/photos/21835296/pexels-photo-21835296.jpeg" alt="Cultured Heritage Ghee"
+              class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Cultured Heritage Ghee</h3>
+            <p class="product-desc">Made from cultured cream using slow-churned butter. Naturally fermented to impart
+              complex, lactic notes.</p>
+            <div class="product-footer">
+              <span class="product-price">$45.00</span>
+              <button class="btn-add-cart" data-product="cultured">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       OUR HERITAGE SECTION
+       ========================================== -->
+  <section class="section-padding" id="heritage" style="background-color: var(--bg-secondary);">
+    <div class="container heritage-container">
+      <div class="heritage-img-wrapper reveal-left">
+        <img src="https://images.pexels.com/photos/35605410/pexels-photo-35605410.jpeg"
+          alt="Traditional clarifying butter" class="heritage-img">
+      </div>
+      <div class="heritage-content reveal-right">
+        <span class="badge">Our Heritage</span>
+        <h2 class="section-title">Rooted in Tradition.<br>Crafted for Today.</h2>
+        <p class="heritage-text">
+          Decades of expertise inspire the creation of our signature ghee. Initiated in small village collectives, we
+          follow age-old traditions where pasture butter is slow-cooked over gentle heat. This delicate caramelization
+          separates key elements to leave only pristine, golden fats.
+        </p>
+        <p class="heritage-text">
+          Today, we bring these authentic culinary techniques to modern tables, adhering to strict international organic
+          safety standards without altering the natural richness of the craft.
+        </p>
+        <div class="heritage-features">
+          <div class="heritage-feature-item">
+            <h4>Traditional Culturing</h4>
+            <p>Naturally fermented cream introduces healthy enzymes and distinct profiles.</p>
+          </div>
+          <div class="heritage-feature-item">
+            <h4>Pristine Grasslands</h4>
+            <p>Our cattle graze freely in certified organic pasture lands.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHY OUR GHEE SECTION
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Pure Quality</span>
+        <h2 class="section-title">Uncompromising Standards</h2>
+        <p class="section-subtitle">Every jar reflects our commitment to natural, pristine ingredients and artisanal
+          techniques.</p>
+      </div>
+
+      <div class="why-grid">
+        <!-- Benefit 1 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="why-title">100% Pure & Natural</h3>
+          <p class="why-desc">No additives, dilution, or heavy modifications. Just pure milk fat prepared to golden
+            standards.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="why-title">Slow-Crafted in Batches</h3>
+          <p class="why-desc">Cooked at low temperatures in copper vessels, allowing precise monitoring of clarification
+            and aroma.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </div>
+          <h3 class="why-title">Rich Natural Aroma</h3>
+          <p class="why-desc">Slow caramelization produces a sensory, nutty fragrance that enhances any sweet or savory
+            preparation.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <h3 class="why-title">No Preservatives</h3>
+          <p class="why-desc">Self-preserving by nature. Free from colors, artificial aromas, thickeners, or chemicals.
+          </p>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3 3L22 4" />
+            </svg>
+          </div>
+          <h3 class="why-title">Traditionally Cultured</h3>
+          <p class="why-desc">Fermented using authentic cultures, making the ghee light on the stomach and nutritionally
+            balanced.</p>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="why-title">Carefully Sourced</h3>
+          <p class="why-desc">We build close ties with organic dairy farms who prioritize livestock welfare and
+            bio-dynamic practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INDIAN SWEETS PREMIUM SECTION
+       ========================================== -->
+  <section class="section-padding sweets-section" id="sweets">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Cultural Heritage</span>
+        <h2 class="section-title">The Golden Soul of Indian Sweets</h2>
+        <p class="section-subtitle">From timeless traditions to unforgettable celebrations, pure ghee gives every sweet
+          its rich aroma, authentic flavour, and irresistible golden finish.</p>
+      </div>
+
+      <!-- Sweets Grid -->
+      <div class="sweets-grid">
+        <!-- Mysore Pak -->
+        <div class="sweet-card reveal">
+          <div class="sweet-img-container">
+            <img src="https://images.pexels.com/photos/18488316/pexels-photo-18488316.jpeg" alt="Mysore Pak"
+              class="sweet-image">
+          </div>
+          <div class="sweet-info">
+            <span class="sweet-badge">Made Better with Pure Ghee</span>
+            <h3 class="sweet-name">Mysore Pak</h3>
+            <p class="sweet-desc">Rich, soft, and perfectly golden. A royal legacy crafted from chickpea flour,
+              caramelized sugars, and clarifying fats.</p>
+          </div>
+        </div>
+
+        <!-- Ghee Laddu -->
+        <div class="sweet-card reveal">
+          <div class="sweet-img-container">
+            <img src="https://images.pexels.com/photos/8887249/pexels-photo-8887249.jpeg" alt="Ghee Laddu"
+              class="sweet-image">
+          </div>
+          <div class="sweet-info">
+            <span class="sweet-badge">Made Better with Pure Ghee</span>
+            <h3 class="sweet-name">Ghee Laddu</h3>
+            <p class="sweet-desc">A timeless festive favourite. Hand-rolled golden spheres of toasted chickpea flour
+              pearls bound by the rich scent of warm ghee.</p>
+          </div>
+        </div>
+
+        <!-- Ghee Halwa -->
+        <div class="sweet-card reveal">
+          <div class="sweet-img-container">
+            <img src="https://images.pexels.com/photos/31109623/pexels-photo-31109623.jpeg" alt="Ghee Halwa"
+              class="sweet-image">
+          </div>
+          <div class="sweet-info">
+            <span class="sweet-badge">Made Better with Pure Ghee</span>
+            <h3 class="sweet-name">Ghee Halwa</h3>
+            <p class="sweet-desc">Smooth, rich, and aromatic. A slow-stirred wheat or lentil delicacy glistening with
+              pure ghee that melts instantly in every bite.</p>
+          </div>
+        </div>
+
+        <!-- Ghee Mysore Pak (Luxurious) -->
+        <div class="sweet-card reveal">
+          <div class="sweet-img-container">
+            <img src="https://images.pexels.com/photos/8887052/pexels-photo-8887052.jpeg" alt="Ghee Mysore Pak"
+              class="sweet-image">
+          </div>
+          <div class="sweet-info">
+            <span class="sweet-badge">Made Better with Pure Ghee</span>
+            <h3 class="sweet-name">Ghee Mysore Pak</h3>
+            <p class="sweet-desc">A luxurious melt-in-the-mouth experience. Dense, velvety blocks slow-simmered in ghee
+              for a premium caramelized crumb texture.</p>
+          </div>
+        </div>
+
+        <!-- Ghee Jangiri / Badusha -->
+        <div class="sweet-card reveal">
+          <div class="sweet-img-container">
+            <img src="https://images.pexels.com/photos/7566499/pexels-photo-7566499.jpeg" alt="Ghee Jangiri / Badusha"
+              class="sweet-image">
+          </div>
+          <div class="sweet-info">
+            <span class="sweet-badge">Made Better with Pure Ghee</span>
+            <h3 class="sweet-name">Ghee Jangiri / Badusha</h3>
+            <p class="sweet-desc">Traditional sweetness with a rich finish. Deep-fried golden rings or layered discs
+              dripping with ghee-infused cardamom syrup.</p>
+          </div>
+        </div>
+
+        <!-- Ghee Kaju Katli -->
+        <div class="sweet-card reveal">
+          <div class="sweet-img-container">
+            <img src="https://images.pexels.com/photos/8624624/pexels-photo-8624624.jpeg" alt="Ghee Kaju Katli"
+              class="sweet-image">
+          </div>
+          <div class="sweet-info">
+            <span class="sweet-badge">Made Better with Pure Ghee</span>
+            <h3 class="sweet-name">Ghee Kaju Katli</h3>
+            <p class="sweet-desc">A premium festive delicacy. Delicate cashew paste diamond cuts finished with a touch
+              of ghee for a velvety, smooth texture.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Storytelling & Popularity Section -->
+      <div class="sweets-story-wrapper reveal">
+        <div class="sweets-story-left">
+          <h3 class="story-title">Why Ghee Makes Every Sweet Special</h3>
+          <ul class="story-points">
+            <li>
+              <span class="story-icon-bullet"></span>
+              <div>
+                <strong>Enhances Rich Natural Flavour</strong>
+                <p>Toasts and elevates underlying notes of flour, nuts, and natural spices.</p>
+              </div>
+            </li>
+            <li>
+              <span class="story-icon-bullet"></span>
+              <div>
+                <strong>Creates an Authentic Traditional Taste</strong>
+                <p>Recreates original culinary methods passed down through heritage cookbooks.</p>
+              </div>
+            </li>
+            <li>
+              <span class="story-icon-bullet"></span>
+              <div>
+                <strong>Adds Beautiful Golden Texture & Aroma</strong>
+                <p>Lends a glossy sheen and a sweet, toasted scent that defines Indian celebrations.</p>
+              </div>
+            </li>
+            <li>
+              <span class="story-icon-bullet"></span>
+              <div>
+                <strong>Key Ingredient in Celebrations</strong>
+                <p>An essential offering in weddings, births, festivals, and sacred ceremonies.</p>
+              </div>
+            </li>
+            <li>
+              <span class="story-icon-bullet"></span>
+              <div>
+                <strong>Loved Across Generations & Cultures</strong>
+                <p>A taste profile that bridges old-world nostalgia with contemporary gourmet dining.</p>
+              </div>
+            </li>
+            <li>
+              <span class="story-icon-bullet"></span>
+              <div>
+                <strong>Indulgent Culinary Experience</strong>
+                <p>Gives sweets a soft texture that melts on the tongue, creating true indulgence.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sweets-story-right">
+          <div class="story-seal">
+            <svg viewBox="0 0 100 100" class="seal-svg">
+              <path id="curve" d="M 24,50 A 26,26 0 1,1 76,50 A 26,26 0 1,1 24,50" fill="none" />
+              <text>
+                <textPath href="#curve" startOffset="50%" text-anchor="middle">TRADITION • CELEBRATION • PURITY •
+                </textPath>
+              </text>
+            </svg>
+            <div class="seal-center">
+              <span class="seal-gold-dot"></span>
+            </div>
+          </div>
+          <p class="story-paragraph">
+            For generations, ghee has remained the sacred foundation of Indian confectionery. Far beyond a simple
+            cooking medium, it represents prosperity, welcome, and celebratory indulgence. From the household kitchen
+            preparing small-batch laddus during festivals to elaborate wedding spreads featuring rich, piping-hot
+            badushas, pure ghee brings a unique soulfulness. It ensures that every sweet is not just tasted, but truly
+            remembered.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CRAFTING PROCESS SECTION
+       ========================================== -->
+  <section class="section-padding" id="process" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">The Craft</span>
+        <h2 class="section-title">The Art of Clarification</h2>
+        <p class="section-subtitle">A highly precise four-step ritual transforming organic milk into pure liquid gold.
+        </p>
+      </div>
+
+      <div class="process-timeline">
+        <!-- Step 1 -->
+        <div class="process-step reveal">
+          <div class="process-dot"></div>
+          <div class="process-content">
+            <div class="process-num">01</div>
+            <h3 class="process-step-title">Carefully Selected</h3>
+            <p class="process-step-desc">Premium quality organic milk is hand-selected from cows on open green pastures
+              during peak spring grazing season.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step reveal">
+          <div class="process-dot"></div>
+          <div class="process-content">
+            <div class="process-num">02</div>
+            <h3 class="process-step-title">Traditionally Cultured</h3>
+            <p class="process-step-desc">Milk is slowly fermented using natural starters to develop signature buttery
+              aroma, complex organic acids, and micro-nutrients.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step reveal">
+          <div class="process-dot"></div>
+          <div class="process-content">
+            <div class="process-num">03</div>
+            <h3 class="process-step-title">Slowly Clarified</h3>
+            <p class="process-step-desc">Pure cultured butter is simmered in small brass and copper vats, allowing water
+              to evaporate and milk solids to toast gently.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step reveal">
+          <div class="process-dot"></div>
+          <div class="process-content">
+            <div class="process-num">04</div>
+            <h3 class="process-step-title">Sealed at Peak Freshness</h3>
+            <p class="process-step-desc">Prisinted ghee is strained through double filters and filled directly into
+              pre-heated glass jars to lock in the warm scent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FULL-WIDTH IMAGE BANNER
+       ========================================== -->
+  <section class="banner-section">
+    <div class="banner-bg"
+      style="background-image: url('https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1600&q=80');">
+    </div>
+    <div class="banner-overlay"></div>
+    <div class="banner-content reveal">
+      <h2 class="banner-title">A Golden Ritual for Every Day</h2>
+      <a href="#products" class="btn btn-primary">Experience the Difference</a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       HEALTH & BENEFITS SECTION
+       ========================================== -->
+  <section class="section-padding" id="benefits">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Nourish</span>
+        <h2 class="section-title">Health & Wellness</h2>
+        <p class="section-subtitle">An ancient superfood loaded with healthy fats, crafted to fuel your body and mind.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"></path>
+              <path d="M9 22v-2"></path>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Naturally Rich</h3>
+          <p class="benefit-desc">Dense in fat-soluble vitamins A, D, E, K and rich antioxidants.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+          </div>
+          <h3 class="benefit-title">High Smoke Point</h3>
+          <p class="benefit-desc">Stable up to 485°F (250°C). Perfect for high-heat cooking without breaking down.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="m9 11 2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Lactose-Friendly</h3>
+          <p class="benefit-desc">Simmering eliminates milk solids, removing traces of casein and lactose.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Keto & Paleo</h3>
+          <p class="benefit-desc">Provides quality medium-chain triglycerides (MCTs) to fuel clean metabolic energy.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Buttery Taste</h3>
+          <p class="benefit-desc">Delivers a velvety profile that enriches grains, breads, and premium roasts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       QUALITY PROMISE SECTION (DARK ACCENT)
+       ========================================== -->
+  <section class="section-padding promise-section">
+    <div class="container promise-container">
+      <div class="promise-content-left reveal-left">
+        <span class="badge">Our Commitment</span>
+        <h2 class="section-title">Purity You Can See.<br>Quality You Can Taste.</h2>
+        <p style="color: rgba(250, 248, 245, 0.7); margin-bottom: 2rem;">
+          We believe luxury gourmet foods are defined by transparency, clean origins, and time-honored methods. Every
+          batch from GHRITA is certified organic, third-party purity tested, and completely traceable back to its farm
+          of origin.
+        </p>
+        <a href="#contact" class="btn btn-primary" style="background-color: var(--gold); color: #0F1411;">Reach Out To
+          Us</a>
+      </div>
+
+      <div class="promise-grid reveal-right">
+        <div class="promise-item">
+          <div class="promise-num-decor">I.</div>
+          <div>
+            <h3 class="promise-item-title">Certified Grass-Fed Milk</h3>
+            <p class="promise-item-desc">Procured strictly from pasture-grazing cattle fed with natural grasses,
+              yielding dense golden fats.</p>
+          </div>
+        </div>
+
+        <div class="promise-item">
+          <div class="promise-num-decor">II.</div>
+          <div>
+            <h3 class="promise-item-title">Traditional Bilona Roots</h3>
+            <p class="promise-item-desc">Simmered slowly in small vessels to achieve precise caramelization and nutty
+              grain clusters.</p>
+          </div>
+        </div>
+
+        <div class="promise-item">
+          <div class="promise-num-decor">III.</div>
+          <div>
+            <h3 class="promise-item-title">Responsible Sourcing</h3>
+            <p class="promise-item-desc">We foster direct, ethical partnerships with farmers, supporting local
+              cooperatives and sustainable practices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       NEWSLETTER & CONTACT SECTION
+       ========================================== -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="newsletter-card reveal">
+        <div class="newsletter-content">
+          <span class="badge">Exclusive Perks</span>
+          <h2 class="section-title" style="margin-bottom: 1rem;">Join the Golden Circle</h2>
+          <p class="section-subtitle">Subscribe to receive private collections release notices, gourmet recipes, and
+            traditional wellness insights.</p>
+
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required
+              aria-label="Email address">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <div class="subscribe-msg" id="subscribe-msg"></div>
+        </div>
+      </div>
+
+      <!-- Split Layout Contact Section -->
+      <div class="contact-split-wrapper reveal">
+        <!-- Left Column: Form & Social links -->
+        <div class="contact-form-side">
+          <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Inquiries & Consultations</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Would you like to partner with us, inquire about gourmet events, or explore wholesale distribution? Drop your message below.</p>
+          
+          <form id="contact-form" style="display: flex; flex-direction: column; gap: 1.25rem; text-align: left; margin-bottom: 2.5rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <input type="text" placeholder="Your Name" required
+                style="width: 100%; border: 1px solid var(--border-color); padding: 0.9rem 1.25rem; border-radius: var(--border-radius-sm); background-color: var(--bg-card);">
+              <input type="email" placeholder="Your Email" required
+                style="width: 100%; border: 1px solid var(--border-color); padding: 0.9rem 1.25rem; border-radius: var(--border-radius-sm); background-color: var(--bg-card);">
+            </div>
+            <textarea placeholder="Your Message" rows="4" required
+              style="width: 100%; border: 1px solid var(--border-color); padding: 0.9rem 1.25rem; border-radius: var(--border-radius-sm); background-color: var(--bg-card); resize: vertical;"></textarea>
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
+          </form>
+
+          <!-- Contact Socials -->
+          <div class="contact-socials-wrapper">
+            <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; color: var(--gold); font-weight: 600;">Connect with GHRITA</h4>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Map -->
+        <div class="contact-map-side">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9251817347963!2d80.222222!3d13.000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAwJzAwLjAiTiA4MMKwMTMnMjAuMCJFOg!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style="min-height: 400px;" 
+                  allowfullscreen="" 
+                  loading="lazy"
+                  title="GHRITA Gourmet Valley Map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container footer-grid">
+      <!-- Col 1 -->
+      <div class="footer-col-brand">
+        <a href="#" class="logo">
+          <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1" fill="none" />
+            <path
+              d="M12 7C12 7 9 11 9 13.5C9 15.1569 10.3431 16.5 12 16.5C13.6569 16.5 15 15.1569 15 13.5C15 11 12 7 12 7Z"
+              fill="currentColor" />
+            <path d="M8 13.5H16" stroke="var(--bg-primary)" stroke-width="1" />
+          </svg>
+          GHRITA
+        </a>
+        <p>Crafting pure golden liquid ghee using traditional slow-clarified methods. Sourced from grass-fed pastures
+          for conscious epicureans.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2 -->
+      <div>
+        <h3 class="footer-col-title">Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Our Ghee</a></li>
+          <li><a href="#heritage">Our Heritage</a></li>
+          <li><a href="#process">Crafting Process</a></li>
+          <li><a href="#benefits">Health Benefits</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div>
+        <h3 class="footer-col-title">Gourmet Shop</h3>
+        <ul class="footer-links">
+          <li><a href="#products">Classic Golden Ghee</a></li>
+          <li><a href="#products">Grass-Fed A2 Ghee</a></li>
+          <li><a href="#products">Cultured Heritage Ghee</a></li>
+          <li><a href="#contact">Private Reserve</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4 -->
+      <div class="footer-col-contact">
+        <h3 class="footer-col-title">Contact Us</h3>
+        <ul class="footer-links" style="gap: 1rem;">
+          <li>
+            <strong
+              style="color: var(--text-primary); display: block; font-size: 0.8rem; text-transform: uppercase;">Concierge</strong>
+            concierge@premiumgheeshop.com
+          </li>
+          <li>
+            <strong
+              style="color: var(--text-primary); display: block; font-size: 0.8rem; text-transform: uppercase;">Headquarters</strong>
+            12 Golden Pasture Lane, Organic Valley
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="container footer-bottom">
+      <p>© 2026 GHRITA. All rights reserved. Sourced ethically worldwide.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       CART DRAWER OVERLAY & PANEL
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Selection</h3>
+      <button class="btn-close-cart" id="close-cart" aria-label="Close Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="cart-items-container">
+      <!-- Dynamically Rendered by app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span class="cart-total-price">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-checkout" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       BACK TO TOP BUTTON
+       ========================================== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M12 4l-8 8h6v8h4v-8h6z" />
+    </svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
