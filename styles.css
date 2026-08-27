@@ -89,6 +89,7 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -540,8 +541,12 @@ header:not(.scrolled) .hamburger span {
   transition: transform var(--transition-normal);
 }
 
-.mobile-link:hover {
+.mobile-link:hover,
+.mobile-link.active {
   color: var(--gold);
+}
+
+.mobile-link:hover {
   transform: scale(1.05);
 }
 
@@ -680,6 +685,21 @@ header:not(.scrolled) .hamburger span {
   100% { transform: translateY(200%); }
 }
 
+@media (max-width: 1024px) {
+  .hero-content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 3rem;
@@ -688,6 +708,7 @@ header:not(.scrolled) .hamburger span {
     font-size: 1.05rem;
   }
 }
+
 
 /* ----------------------------------------------------
    Signature Products Section
@@ -700,13 +721,19 @@ header:not(.scrolled) .hamburger span {
 
 @media (max-width: 1024px) {
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .product-card {
+    flex: 0 1 calc(50% - 1.25rem);
   }
 }
 
 @media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: 1fr;
+  .product-card {
+    flex: 0 1 100%;
   }
 }
 
@@ -822,7 +849,7 @@ header:not(.scrolled) .hamburger span {
   align-items: center;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .heritage-container {
     grid-template-columns: 1fr;
     gap: 3.5rem;
@@ -902,7 +929,7 @@ header:not(.scrolled) .hamburger span {
   gap: 2.5rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -929,28 +956,29 @@ header:not(.scrolled) .hamburger span {
   box-shadow: var(--shadow-md);
 }
 
-.why-icon {
-  width: 64px;
-  height: 64px;
+.why-image-container {
+  width: 80px;
+  height: 80px;
   margin: 0 auto 1.5rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
-  background-color: var(--bg-secondary);
-  color: var(--gold);
+  overflow: hidden;
+  border: 2px solid var(--border-color-rich);
   transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--bg-secondary);
 }
 
-.why-card:hover .why-icon {
-  background-color: var(--gold);
-  color: var(--bg-primary);
-  transform: rotateY(180deg);
+.why-card:hover .why-image-container {
+  border-color: var(--gold);
+  transform: scale(1.08);
+  box-shadow: var(--shadow-gold);
 }
 
-.why-icon svg {
-  width: 32px;
-  height: 32px;
+.why-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .why-title {
@@ -1170,19 +1198,25 @@ header:not(.scrolled) .hamburger span {
 
 @media (max-width: 1200px) {
   .benefits-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .benefit-card {
+    flex: 0 1 calc(33.333% - 1rem);
   }
 }
 
 @media (max-width: 768px) {
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .benefit-card {
+    flex: 0 1 calc(50% - 0.75rem);
   }
 }
 
 @media (max-width: 480px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
+  .benefit-card {
+    flex: 0 1 100%;
   }
 }
 
@@ -1385,10 +1419,21 @@ header:not(.scrolled) .hamburger span {
   align-items: center;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .promise-container {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+  .promise-content-left {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .promise-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
   }
 }
 
@@ -1986,7 +2031,7 @@ footer {
   box-shadow: var(--shadow-md);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .sweets-story-wrapper {
     grid-template-columns: 1fr;
     gap: 3.5rem;
@@ -2048,7 +2093,7 @@ footer {
   padding-left: 3.5rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .sweets-story-right {
     border-left: none;
     padding-left: 0;
@@ -2125,7 +2170,7 @@ footer {
   align-items: stretch;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .contact-split-wrapper {
     grid-template-columns: 1fr;
     gap: 3.5rem;

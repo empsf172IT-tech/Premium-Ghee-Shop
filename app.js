@@ -105,7 +105,18 @@ function initNavigation() {
         
         // Desktop nav active class
         navLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${id}`) {
+          const href = link.getAttribute('href');
+          if (href === `#${id}` || (id === 'home' && href === '#')) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+
+        // Mobile nav active class
+        mobileLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === `#${id}` || (id === 'home' && href === '#')) {
             link.classList.add('active');
           } else {
             link.classList.remove('active');
