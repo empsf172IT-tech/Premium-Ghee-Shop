@@ -24,18 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
    Theme Management
    ========================================================================== */
 function initTheme() {
-  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggles = document.querySelectorAll('.theme-toggle');
   const storedTheme = localStorage.getItem('theme') || 'light';
 
   // Apply initially
   document.documentElement.setAttribute('data-theme', storedTheme);
 
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+  themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
   });
 }
 
@@ -90,6 +92,23 @@ function initNavigation() {
       spans[2].style.transform = 'none';
     });
   });
+
+  // Close mobile nav when logo is clicked
+  const logo = document.getElementById('logo');
+  if (logo && mobileNav && hamburger) {
+    logo.addEventListener('click', () => {
+      if (mobileNav.classList.contains('active')) {
+        mobileNav.classList.remove('active');
+        hamburger.classList.remove('active');
+        const spans = hamburger.querySelectorAll('span');
+        if (spans.length >= 3) {
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+        }
+      }
+    });
+  }
 
   // Track active section and update navigation highlight
   const observerOptions = {
@@ -182,11 +201,11 @@ function initScrollAnimations() {
    E-commerce Cart Logic
    ========================================================================== */
 function initCart() {
-  const cartTrigger = document.getElementById('cart-trigger');
+  const cartTriggers = document.querySelectorAll('.cart-trigger');
   const cartOverlay = document.getElementById('cart-overlay');
   const cartDrawer = document.getElementById('cart-drawer');
   const closeCartBtn = document.getElementById('close-cart');
-  const cartCount = document.querySelector('.cart-count');
+  const cartCounts = document.querySelectorAll('.cart-count');
   const cartItemsContainer = document.querySelector('.cart-items-container');
   const cartTotalPrice = document.querySelector('.cart-total-price');
   const addCartBtns = document.querySelectorAll('.btn-add-cart, .btn-primary[data-product]');
@@ -205,9 +224,27 @@ function initCart() {
   function toggleCart() {
     cartOverlay.classList.toggle('active');
     cartDrawer.classList.toggle('active');
+
+    // Auto-close mobile menu if it is open
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburger = document.getElementById('hamburger');
+    if (mobileNav && mobileNav.classList.contains('active')) {
+      mobileNav.classList.remove('active');
+      if (hamburger) {
+        hamburger.classList.remove('active');
+        const spans = hamburger.querySelectorAll('span');
+        if (spans.length >= 3) {
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+        }
+      }
+    }
   }
 
-  if (cartTrigger) cartTrigger.addEventListener('click', toggleCart);
+  cartTriggers.forEach(trigger => {
+    trigger.addEventListener('click', toggleCart);
+  });
   if (cartOverlay) cartOverlay.addEventListener('click', toggleCart);
   if (closeCartBtn) closeCartBtn.addEventListener('click', toggleCart);
 
@@ -268,10 +305,10 @@ function initCart() {
   function renderCart() {
     // Update Badge Count
     const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
-    if (cartCount) {
-      cartCount.textContent = totalItems;
-      cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
-    }
+    cartCounts.forEach(countSpan => {
+      countSpan.textContent = totalItems;
+      countSpan.style.display = totalItems > 0 ? 'flex' : 'none';
+    });
 
     if (!cartItemsContainer) return;
 

@@ -501,6 +501,13 @@ header:not(.scrolled) .hamburger span {
   .hamburger {
     display: flex;
   }
+  .nav-actions .theme-toggle,
+  .nav-actions .cart-trigger {
+    display: none;
+  }
+  .mobile-nav-actions {
+    display: flex;
+  }
 }
 
 /* Mobile Nav Overlay */
@@ -514,14 +521,52 @@ header:not(.scrolled) .hamburger span {
   z-index: 999;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   transition: right var(--transition-slow);
-  padding: 2rem;
+  padding: 100px 2rem 2rem 2rem;
+  overflow-y: auto;
 }
 
 .mobile-nav.active {
   right: 0;
+}
+
+.mobile-nav-actions {
+  display: none; /* Hidden on desktop by default */
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.mobile-nav-actions .theme-toggle,
+.mobile-nav-actions .cart-trigger {
+  position: relative;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+  background-color: var(--bg-card);
+}
+
+.mobile-nav-actions .theme-toggle:hover,
+.mobile-nav-actions .cart-trigger:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  background-color: var(--bg-secondary);
+}
+
+.mobile-nav-actions svg {
+  width: 20px;
+  height: 20px;
 }
 
 .mobile-menu {
